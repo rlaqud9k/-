@@ -13,7 +13,19 @@ public class BoardVo {
 	int count;
 	int limit;
 	int offset;
+	int fno;
 	
+	
+
+public int getFno() {
+		return fno;
+	}
+
+
+	public void setFno(int fno) {
+		this.fno = fno;
+	}
+
 
 public int getNo() {
 		return no;
@@ -97,7 +109,7 @@ public int getNo() {
 
 @Override
 public String toString() {
-	return no+id+title+content+count+date;
+	return fno+""+no+id+title+content+count+date;
 }
 
 

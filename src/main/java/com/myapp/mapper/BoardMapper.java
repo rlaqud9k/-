@@ -32,4 +32,7 @@ public interface BoardMapper {
 	@Update("UPDATE board SET title=#{title}, content=#{content} WHERE no=#{no};")
 	public boolean updateboard(BoardVo board);
 	
+	@Update("UPDATE board SET count = count+1 WHERE no=#{no};")
+	public boolean count(int no);
+	
 }

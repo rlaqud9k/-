@@ -48,9 +48,10 @@
 				
 				<c:forEach items="${listt}" var="list" varStatus="">
 				<tr>
-					<td>${list.no}</td>
+					<td>${list.fno}</td>
 					<td><a href='<c:url value="/viewss/lookdo2">
 					<c:param name="no" value="${list.no}"/>
+					<c:param name="id" value="${list.id}"/>
 					</c:url>'>	
 					${list.title}</a></td>
 					<td>${list.id}</td>

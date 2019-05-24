@@ -34,13 +34,13 @@
 		시 글</h2>
 	<a href="<c:url value="/viewss/writer"/>">
 		<button class="btn btn-lg btn-primary pull-right" type="submit"
-			style="font-weight: bold; font-family:">글쓰기</button>
+			style="display:none; bold; font-family:">글쓰기</button>
 	</a>
 	<div class="table-responsive">
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th style="width: 10%">번호</th>
+					<th style="width: 10%;">번호</th>
 					<th style="width: 40%">제목</th>
 					<th style="width: 15%">작성자</th>
 					<th style="width: 20%">날짜</th>
@@ -51,10 +51,11 @@
 
 				<c:forEach items="${listt}" var="list" varStatus="">
 					<tr>
-						<td>${list.no}</td>
+						<td>${list.fno}</td>
 						<td><a
 							href='<c:url value="/viewss/lookdo2">
 					<c:param name="no" value="${list.no}"/>
+					<c:param name="id" value="${list.id}"/>
 					</c:url>'>
 								${list.title}</a></td>
 						<td>${list.id}</td>

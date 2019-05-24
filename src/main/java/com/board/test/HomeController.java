@@ -50,6 +50,10 @@ public class HomeController {
 		model.addAttribute("pagenum", pagenum);
 		model.addAttribute("serverTime", formattedDate);
 		List<BoardVo> list = boardmapper.getContent2();
+		
+		for(int i=0; i<=list.size()-1; i++) {
+			list.get(i).setFno(list.size() - i);
+		}
 //		System.out.println(list.get(0)+""+list.get(list.size()-1));
 		List<BoardVo> listt = new ArrayList<BoardVo>();
 		int s = (no - 1) * 20;
@@ -84,6 +88,10 @@ public class HomeController {
 		model.addAttribute("pagenum", pagenum);
 		model.addAttribute("serverTime", formattedDate);
 		List<BoardVo> list = boardmapper.getContent2();
+		for(int i=0; i<=list.size()-1; i++) {
+			list.get(i).setFno(list.size() - i);
+		}
+		
 		List<BoardVo> listt = new ArrayList<BoardVo>();
 		int s = (no - 1) * 20;
 		if (no == 1) {
