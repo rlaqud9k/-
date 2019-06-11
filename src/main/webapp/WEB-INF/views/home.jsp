@@ -14,6 +14,27 @@
 	href="https://fonts.googleapis.com/css?family=Nanum+Gothic:700&amp;subset=korean"
 	rel="stylesheet">
 <title>Home!</title>
+<script type="text/javascript">
+function getTime(){
+	const date = new Date();
+	const second = date.getSeconds();
+	const minutes = date.getMinutes();
+	const hours = date.getHours();
+	
+	var timer = document.querySelector('#timer');
+	
+	timer.innerText = "ddd";
+}
+
+function init(){
+	getTime();
+	setInterval(getTime, 1000);
+};
+
+init();
+
+
+</script>
 <!-- JS -->
 </head>
 <div class="blog-masthead">
@@ -28,7 +49,7 @@
 <body class="container">
 	<div class="jumbotron">
 		<h1>Hello, world!</h1>
-		<p>The time on the server is ${serverTime}.</p>
+		<p id="timer">The time on the server is 00:00:00.</p>
 	</div>
 	<h2 class="h2c" style="font-family: 'Nanum Gothic', sans-serif;">게
 		시 글</h2>
