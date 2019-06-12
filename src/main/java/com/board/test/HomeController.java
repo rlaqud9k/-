@@ -48,7 +48,6 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		double pagenum = (double) boardmapper.getContent2().size() / 20;
 		model.addAttribute("pagenum", pagenum);
-		model.addAttribute("serverTime", formattedDate);
 		List<BoardVo> list = boardmapper.getContent2();
 		
 		for(int i=0; i<=list.size()-1; i++) {
